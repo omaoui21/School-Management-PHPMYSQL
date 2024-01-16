@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>ShemsyMassar - Formateurs</title>
+
+<link rel="shortcut icon" href="assets/img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/feather/feather.css">
+
+<link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+     <div class="main-wrapper">
+
+<div class="header">
+
+    <div class="header-left">
+        <a href="pdg-dashboard.php" class="logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </a>
+        <a href="pdg-dashboard.php" class="logo logo-small">
+            <img src="assets/img/logo-small.png" alt="Logo" width="60" height="60">
+        </a>
+    </div>
+    <div class="menu-toggle">
+        <a href="javascript:void(0);" id="toggle_btn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="top-nav-search">
+        <form method="POST" action="formateur.php">
+            <input type="text" class="form-control" name="keyword" placeholder="Search here">
+            <button class="btn" type="submit" name="search"><i class="fas fa-search"></i></button>
+        </form>
+        
+    </div>
+    <a class="mobile_btn" id="mobile_btn">
+        <i class="fas fa-bars"></i>
+    </a>
+
+  
+
+    <ul class="nav user-menu">
+
+        
+        <li class="nav-item zoom-screen me-2">
+            <a href="#" class="nav-link header-nav-list win-maximize">
+                <img src="assets/img/icons/header-icon-04.svg" alt="">
+            </a>
+        </li>
+
+        <li class="nav-item dropdown has-arrow new-user-menus">
+            <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                <span class="user-img">
+                    <img class="rounded-circle" src="upload/3135715.png" width="31"
+                        alt="Jassa Rich">
+                    <div class="user-text">
+                        <h6>jalil</h6>
+                        <p class="text-muted mb-0">pdg</p>
+                    </div>
+                </span>
+            </a>
+            <div class="dropdown-menu">
+                <div class="user-header">
+                    <div class="avatar avatar-sm">
+                        <img src="upload/3135715.png" alt="User Image"
+                            class="avatar-img rounded-circle">
+                    </div>
+                    <div class="user-text">
+                        <h6>jalil</h6>
+                        <p class="text-muted mb-0">pdg</p>
+                    </div>
+                </div>
+                <a class="dropdown-item" href="profile.php">My Profile</a>
+                <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+    <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">
+                            <span>Main Menu</span>
+                        </li>
+                        <li class="submenu active">
+                            <a href="#"><i class="feather-grid"></i> <span> Tableau de bord</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="pdg-dashboard.php" class="active">Tableau de bord</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="etudiant.php"><i class="fas fa-graduation-cap"></i> <span>Liste des Etudiants</span></a>
+                        </li>
+                        <li>
+                            <a href="formateur.php"><i class="fas fa-chalkboard-teacher"></i> <span>Liste des Formateurs</span></a>
+                        </li>
+                        
+                        
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-home"></i> <span> Centre</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="centre.php">Liste Centres </a></li>
+                                <li><a href="add-centre.php">Ajouter Centre</a></li>
+                            </ul>
+                        </li>
+                      
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-user"></i> <span> Admin </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="admin.php">Liste Admin </a></li>
+                                <li><a href="add-admin.php">Ajouter Admin</a></li>
+                            </ul>
+                        </li>
+                       
+                                            
+                       
+                       
+                        <li>
+                            <a href="blank-page.php"><i class="fas fa-file"></i> <span>Blank Page</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+    
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row align-items-center">
+<div class="col">
+<h3 class="page-title">Admins</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="pdg-dashboard.php">Tableau de bord</a></li>
+<li class="breadcrumb-item active">Admins</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<div class="card card-table">
+<div class="card-body">
+
+<div class="page-header">
+<div class="row align-items-center">
+<div class="col">
+<h3 class="page-title">Admin</h3>
+</div>
+<div class="col-auto text-end float-end ms-auto download-grp">
+<a href="#"  class="btn btn-outline-primary me-2" id="downloadLink" download="table_export.xlsx"><i class="fas fa-download"></i> Download Excel</a>
+<a href="add-admin.php" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+</div>
+</div>
+</div>
+
+<div class="table-responsive">
+<table class="table border-0 star-student table-hover table-center mb-0 datatable table-striped" id="myTable">
+<thead class="student-thread">
+<tr>
+
+<th>Nom</th>
+<th>Prénom</th>
+<th>Email</th>
+<th>Date de Naissance</th>
+<th>Telephone</th>
+<th>Address</th>
+<th>Centre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+
+</td>
+<td>
+<h2 class="table-avatar">
+<a href="#" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="upload/3135715.png" alt="admin Image" width="200"alt="User Image">
+<a href="#">omaui</a>
+
+</h2>
+</td>
+<td>zakariae</td>
+<td>zakariae.omaoui@gmail.com</td>
+<td>2013-06-12</td>
+<td>235555</td>
+<td>saada 3 , el jadida</td>
+<td>shemsy el jadida</td>
+</tr>
+<tr>
+
+</td>
+<td>
+<h2 class="table-avatar">
+<a href="#" class="avatar avatar-sm me-2"><img class="avatar-img rounded-circle" src="upload/3135715.png" alt="admin Image" width="200"alt="User Image">
+<a href="#">saad</a>
+
+</h2>
+</td>
+<td>saad</td>
+<td>saad.dhm@gmail.com</td>
+<td>0000-00-00</td>
+<td>456305</td>
+<td>ain atiq</td>
+<td>ain atiq</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<p>Copyright © 2023 ZAKARIAE && ISSAM.</p>
+</footer>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/FileSaver.js"></script>
+
+
+<script>
+  function downloadTableAsExcel() {
+    const table = document.getElementById('myTable');
+    const rows = table.getElementsByTagName('tr');
+    const data = [];
+
+    // Iterate over table rows
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      const rowData = [];
+      const cells = row.getElementsByTagName('td');
+      
+      // Iterate over table cells
+      for (let j = 0; j < cells.length; j++) {
+        const cell = cells[j];
+        rowData.push(cell.innerText);
+      }
+      
+      data.push(rowData);
+    }
+
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet 1');
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    const url = URL.createObjectURL(blob);
+
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    downloadLink.click();
+  }
+</script>
+
+
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/feather.min.js"></script>
+
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
